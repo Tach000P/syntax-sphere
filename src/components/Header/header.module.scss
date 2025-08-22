@@ -1,0 +1,31 @@
+@use "src/app/styles/variables" as vars;
+
+.nav {
+  min-width: vars.$base_width - vars.$base_padding * 2 - 2;
+  border: 1px solid #ffffff67;
+  padding: vars.$base_padding;
+  // background-color: vars.$base_color;
+  background-color: hsla(223, 16%, 17%, 0.4);
+  background-image: linear-gradient(
+    139deg,
+    rgba(36, 40, 50, 0.4) 0%,
+    hsla(223, 16%, 17%, 0.4) 0%,
+    hsla(285, 18%, 13%, 0.4) 100%
+  );
+  position: sticky;
+  top: 7px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: vars.$blur_color;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  z-index: 100000;
+}
+
+.left_side {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

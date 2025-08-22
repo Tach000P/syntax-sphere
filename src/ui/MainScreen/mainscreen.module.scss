@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.wrapper {
+  width: 614px;
+}
+.card {
+  display: flex;
+  width: calc(100% - 20px);
+  position: relative;
+  overflow: hidden;
+  height: 296px;
+  margin-left: 20px;
+  margin-top: 20px;
+  justify-content: space-around;
+  overflow: visible;
+}
+
+.item {
+  height: 100%;
+  display: inline-block;
+  &:last-child {
+    display: flex;
+    align-items: end;
+  }
+}

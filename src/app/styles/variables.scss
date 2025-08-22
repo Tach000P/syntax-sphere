@@ -1,0 +1,22 @@
+@use "./fonts.scss";
+
+//Colors
+$base_color: #121212;
+$base_color_light: #242424;
+$base_font_size: 16px;
+$primary_color: #9900ff;
+$secondary_color: #61ffe5;
+$third_color: #ff0066;
+$primary_color_dark: #7e00b3;
+$base_text_color: #ffffff;
+$base_text_color_dark: #7e7e7e;
+$blur_color: #222228d9;
+
+//Fonts
+$base_font_family: "Roboto", sans-serif;
+$logo_font_family: "Mozilla Headline", sans-serif;
+$button_font_family: "Roboto", sans-serif;
+
+//Width, margin/padding
+$base_width: 1200px;
+$base_padding: 20px;

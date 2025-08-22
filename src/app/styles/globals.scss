@@ -1,0 +1,23 @@
+@use "src/app/styles/variables" as vars;
+@use "src/app/styles/mixins.scss";
+@use "src/app/styles/fonts.scss";
+
+body {
+  background-color: vars.$base_color;
+  margin: 0;
+  padding: 0;
+}
+* {
+  font-family: vars.$base_font_family;
+  color: vars.$base_text_color;
+}
+a {
+  text-decoration: none;
+}
+.main {
+  max-width: vars.$base_width;
+  margin: 0 auto;
+  padding: vars.$base_padding {
+    bottom: 0;
+  }
+}

@@ -1,0 +1,48 @@
+@use "src/app/styles/variables" as vars;
+@use "src/app/styles/mixins.scss";
+@use "src/app/styles/fonts.scss";
+
+.button {
+  //   min-width: 100px;
+  width: auto;
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+  //   box-shadow: 0px 0px 20px -20px;
+  cursor: pointer;
+  //   background-color: vars.$base_color_light;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out 0ms;
+  user-select: none;
+  padding: 0;
+  margin: 0 6px;
+  padding: 0 12px;
+
+  &:hover {
+    background-color: vars.$primary_color;
+    transform: translate(1px, -1px);
+
+    span {
+      color: vars.$base_text_color;
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+    font-family: vars.$button_font_family;
+    transition: all 0.3s ease-in-out 0ms;
+    color: vars.$base_text_color_dark;
+  }
+}

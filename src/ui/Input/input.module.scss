@@ -1,0 +1,58 @@
+@use "src/app/styles/variables" as vars;
+
+.searchBox {
+  display: flex;
+  max-width: 430px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  position: relative;
+  border-radius: 50px;
+  background: linear-gradient(vars.$base_color_light, vars.$base_color_light)
+      padding-box,
+    linear-gradient(45deg, vars.$third_color, vars.$secondary_color) border-box;
+  border: 1px solid transparent;
+}
+
+.searchButton {
+  color: white;
+  position: absolute;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(
+    --gradient-2,
+    linear-gradient(90deg, vars.$primary_color 0%, vars.$third_color 100%)
+  );
+  border: 0;
+  display: inline-block;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: #1a1a1a;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+}
+.searchInput {
+  width: 270px;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  padding: 15px {
+    right: 46px;
+  }
+}

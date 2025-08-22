@@ -1,0 +1,10 @@
+@use "src/app/styles/variables.scss" as vars;
+
+.footer {
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid #fff;
+}

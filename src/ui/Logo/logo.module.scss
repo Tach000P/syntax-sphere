@@ -1,0 +1,19 @@
+@use "src/app/styles/fonts.scss";
+@use "src/app/styles/variables" as vars;
+
+.logo {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+
+  span {
+    font-family: vars.$logo_font_family;
+  }
+}
+
+.icon {
+  background-image: url("/logo.png");
+  background-size: 100% 100%;
+  display: inline-block;
+  margin-right: 10px;
+}

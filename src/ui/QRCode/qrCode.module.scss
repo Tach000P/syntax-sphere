@@ -1,0 +1,119 @@
+@use "src/app/styles/variables" as vars;
+@use "src/app/styles/mixins.scss";
+
+.card {
+  width: 190px;
+  height: 190px;
+  background: rgb(22, 22, 22);
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 8s thumb-thumb infinite;
+
+  .qr {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-size: 100% 100%;
+  }
+
+  &:hover {
+    cursor: none;
+    background-color: white;
+
+    .prompt {
+      opacity: 0;
+    }
+    .qr {
+      opacity: 1;
+    }
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.creator_points {
+  width: 3.25rem;
+  height: 3rem;
+  color: vars.$third_color;
+  /* w-5 h-5 mr-2 text-indigo-400 */
+}
+
+.blurry_splash {
+  position: absolute;
+  inset: 0;
+  width: 60px;
+  margin: 0 auto;
+  height: 60px;
+  border-radius: 1rem;
+  z-index: -1;
+  opacity: 70%;
+  filter: blur(15px);
+  background: linear-gradient(
+    120deg,
+    rgba(vars.$third_color, 0.24),
+    rgba(vars.$third_color, 0.384),
+    rgba(vars.$third_color, 0.226)
+  );
+}
+
+.prompt {
+  position: absolute;
+  color: rgb(173, 173, 173);
+  text-align: center;
+}
+
+.small_text {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  font-size: 8px;
+  margin-top: 28px;
+  opacity: 0.5;
+}
+
+.token_container {
+  animation: 2s spinny-token-yayyy infinite;
+  margin: 0 auto {
+    bottom: 10px;
+  }
+  width: 80px;
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes spinny-token-yayyy {
+  0% {
+    transform: perspective(200px) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(200px) rotateY(360deg);
+  }
+}
+
+@keyframes thumb-thumb {
+  0%,
+  10%,
+  100% {
+    transform: scale(100%);
+  }
+
+  5% {
+    transform: scale(103%);
+  }
+
+  7% {
+    transform: scale(97%);
+  }
+}
