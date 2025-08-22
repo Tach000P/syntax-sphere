@@ -10,7 +10,7 @@ const allowedTypes = ["news", "guides"];
 export const generateMetadata = async ({
   params,
 }: {
-  params: { type: string };
+  params: Promis<{ type: string }>;
 }): Promise<Metadata> => {
   const { type } = params;
   if (!allowedTypes.includes(type)) {
@@ -26,7 +26,7 @@ export const generateMetadata = async ({
   };
 };
 
-async function Types({ params }: { params: { type: string } }) {
+async function Types({ params }: { params: Promis<{ type: string }> }) {
   const { type } = params;
 
   if (!allowedTypes.includes(type) || !type) {
@@ -52,3 +52,4 @@ async function Types({ params }: { params: { type: string } }) {
 }
 
 export default Types;
+
