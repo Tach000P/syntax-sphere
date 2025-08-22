@@ -1,5 +1,4 @@
 import QRCOde from "@/ui/QRCode/QRCode";
-import { NextPage } from "next";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
