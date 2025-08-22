@@ -1,8 +1,7 @@
-import Layout from "@/app/layout";
+// import Layout from "@/app/layout";
 import Empty from "@/components/Empty/Empty";
 import PostItem from "@/components/PostItem/PostItem";
 import { PostService } from "@/services/post.service";
-import { NextPage } from "next";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
