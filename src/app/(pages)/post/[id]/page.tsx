@@ -15,7 +15,7 @@ interface TypesParams {
 export const generateMetadata = async ({
   params,
 }: TypesParams): Promise<Metadata> => {
-  const { id } = await params;
+  const { id } = params;
   if (!id) {
     return {
       title: "Not Found",
@@ -64,3 +64,4 @@ const PostPage: NextPage<TypesParams> = async ({ params }) => {
 // };
 
 export default PostPage;
+
