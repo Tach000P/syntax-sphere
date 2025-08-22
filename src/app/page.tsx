@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Главная страница Syntax Sphere с новостями и гайдами",
 };
 
-const Page: NextPage = async () => {
+async function Page() {
   const posts = await PostService.getAll();
 
   return (
@@ -25,6 +25,6 @@ const Page: NextPage = async () => {
       </div>
     </>
   );
-};
+}
 
 export default Page;
