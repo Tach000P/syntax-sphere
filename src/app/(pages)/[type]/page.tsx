@@ -17,7 +17,7 @@ interface TypesParams {
 export const generateMetadata = async ({
   params,
 }: TypesParams): Promise<Metadata> => {
-  const { type } = await params;
+  const { type } = params;
   if (!allowedTypes.includes(type)) {
     return {
       title: "Not Found",
@@ -32,7 +32,7 @@ export const generateMetadata = async ({
 };
 
 const Types: NextPage<TypesParams> = async ({ params }) => {
-  const { type } = await params;
+  const { type } = params;
 
   if (!allowedTypes.includes(type) || !type) {
     notFound();
@@ -57,3 +57,4 @@ const Types: NextPage<TypesParams> = async ({ params }) => {
 };
 
 export default Types;
+
