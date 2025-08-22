@@ -6,15 +6,11 @@ import Layout from "@/app/layout";
 import PostContent from "@/components/PostContent/PostContent";
 import { Metadata } from "next";
 
-interface TypesParams {
-  params: {
-    id: string;
-  };
-}
-
-export const generateMetadata = async ({
+export async function generateMetadata({
   params,
-}: TypesParams): Promise<Metadata> => {
+}: {
+  params: { id: string };
+}): Promise<Metadata> {
   const { id } = params;
   if (!id) {
     return {
@@ -27,13 +23,13 @@ export const generateMetadata = async ({
     title: `${post?.name} - Syntax Sphere`,
     description: `${post?.name} - информация о посте`,
   };
-};
+}
 
-const PostPage: NextPage<TypesParams> = async ({ params }) => {
+async function PostPage({ params }: { params: { id: string } }) {
   const post = await PostService.getByID(String(params?.id));
 
   return <PostContent post={post} />;
-};
+}
 
 // interface Params extends ParsedUrlQuery {
 //   id: string;
@@ -64,4 +60,3 @@ const PostPage: NextPage<TypesParams> = async ({ params }) => {
 // };
 
 export default PostPage;
-
