@@ -8,7 +8,7 @@ import { Metadata } from "next";
 export async function generateMetadata({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = params;
   if (!id) {
@@ -24,7 +24,7 @@ export async function generateMetadata({
   };
 }
 
-async function PostPage({ params }: { params: { id: string } }) {
+async function PostPage({ params }: { params: Promise<{ id: string }> }) {
   const post = await PostService.getByID(String(params?.id));
 
   return <PostContent post={post} />;
@@ -59,3 +59,4 @@ async function PostPage({ params }: { params: { id: string } }) {
 // };
 
 export default PostPage;
+
