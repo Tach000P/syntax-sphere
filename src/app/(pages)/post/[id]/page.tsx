@@ -1,8 +1,7 @@
-import { IPost, IPostData, IPostSingle } from "@/interfaces/post.interface";
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+// import { IPost, IPostData, IPostSingle } from "@/interfaces/post.interface";
+// import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { PostService } from "@/services/post.service";
-import { ParsedUrlQuery } from "querystring";
-import Layout from "@/app/layout";
+// import Layout from "@/app/layout";
 import PostContent from "@/components/PostContent/PostContent";
 import { Metadata } from "next";
 
