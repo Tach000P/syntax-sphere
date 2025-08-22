@@ -12,7 +12,7 @@ export const generateMetadata = async ({
 }: {
   params: Promise<{ type: string }>;
 }): Promise<Metadata> => {
-  const { type } = params;
+  const { type } = await params;
   if (!allowedTypes.includes(type)) {
     return {
       title: "Not Found",
@@ -27,7 +27,7 @@ export const generateMetadata = async ({
 };
 
 async function Types({ params }: { params: Promise<{ type: string }> }) {
-  const { type } = params;
+  const { type } = await params;
 
   if (!allowedTypes.includes(type) || !type) {
     notFound();
@@ -52,5 +52,6 @@ async function Types({ params }: { params: Promise<{ type: string }> }) {
 }
 
 export default Types;
+
 
 
