@@ -8,15 +8,11 @@ import { Metadata } from "next";
 
 const allowedTypes = ["news", "guides"];
 
-interface TypesParams {
-  params: {
-    type: string;
-  };
-}
-
 export const generateMetadata = async ({
   params,
-}: TypesParams): Promise<Metadata> => {
+}: {
+  params: { type: string };
+}): Promise<Metadata> => {
   const { type } = params;
   if (!allowedTypes.includes(type)) {
     return {
@@ -31,7 +27,7 @@ export const generateMetadata = async ({
   };
 };
 
-const Types: NextPage<TypesParams> = async ({ params }) => {
+async function Types({ params }: { params: { type: string } }) {
   const { type } = params;
 
   if (!allowedTypes.includes(type) || !type) {
@@ -54,7 +50,6 @@ const Types: NextPage<TypesParams> = async ({ params }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Types;
-
