@@ -25,7 +25,8 @@ export async function generateMetadata({
 }
 
 async function PostPage({ params }: { params: Promise<{ id: string }> }) {
-  const post = await PostService.getByID(String(params?.id));
+  const { id } = await params;
+  const post = await PostService.getByID(String(id));
 
   return <PostContent post={post} />;
 }
@@ -59,5 +60,6 @@ async function PostPage({ params }: { params: Promise<{ id: string }> }) {
 // };
 
 export default PostPage;
+
 
 
