@@ -10,7 +10,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
-  const { id } = params;
+  const { id } = await params;
   if (!id) {
     return {
       title: "Not Found",
@@ -59,4 +59,5 @@ async function PostPage({ params }: { params: Promise<{ id: string }> }) {
 // };
 
 export default PostPage;
+
 
