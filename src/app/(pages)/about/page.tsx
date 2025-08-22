@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Информация о нас и контакты",
 };
 
-const About: NextPage = () => {
+function About() {
   return (
     <div>
       <h1>О нас</h1>
@@ -32,6 +32,6 @@ const About: NextPage = () => {
       </div>
     </div>
   );
-};
+}
 
 export default About;
